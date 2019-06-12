@@ -49,13 +49,22 @@
   }
 
 #xx {
-	padding-top: 65px;
-	padding-bottom: 45px;
+	padding-top: 55px;
+	padding-bottom: 20px;
 	/*background-color: #f2f2f2;*/
 	background-color: #FFFFFF
 }
 
 	</style> 
+	
+	<style type="text/css">
+   ul{list-style:none;width:40px;height:40px}
+   .li{width:40px;height:40px}
+   .img26{width:30px;height:30px;text-align:center;margin-left:5px;cursor: pointer;}
+   .p{text-align: center;}
+	</style>
+	
+	
   </head>
 
 
@@ -78,17 +87,35 @@
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
-					<img width="280px" height="280px" src="zjy.jpg" alt="zjy">
+					<img width="280px" height="280px" src="images/zjy.jpg" alt="zjy">
 					<h1>周敬原是大沙雕</h1>
 <!--					<p align="center"><a href="https://weibo.com/u/2605853831" target="_blank"><button type="submit" class="btn btn-success">点击去沙雕的微博</button></a></p>
 -->
 			<!--		<hr />
 					<p>周敬原的霸霸 宣</p>			
 -->
+ <div nowrap><img  class="img26" src="images/yizan.png"/><p class="likes" class="p">&nbsp;</p></div>
 				</div><!-- /col-lg-8 -->
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /ww -->
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function () {
+		for (var i = 0; i < $('.likes').length; i++) {
+			var ran = Math.floor(Math.random() * 1000 + 1)
+			$('.likes').eq(i).text(ran)	
+		}
+		$("img").click(function () {
+			var num = $(this).next().text()
+			num++;
+			$(this).next().text(num);
+		});
+	});
+</script>
 
 
 
