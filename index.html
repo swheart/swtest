@@ -43,13 +43,28 @@
 				
 				<p align="center"><img src="images/iconFULL.JPG" alt="shallwe" width="50%" height="50%"></p>
 				
-				
+				<span id="show" style="font-size: 20px;"></span>
 
 			</div>
 		</div>
 		
 		
 	</div><!-- /container -->
+	
+	
+	
+	<script type="text/javascript"> 
+    var t = 10;//设定跳转的时间 
+    setInterval("refer()", 1000); //启动1秒定时 
+    function refer() {
+        if (t == 0){
+            location = "http://shallwe.work"; //跳转的地址
+        }
+        document.getElementById('show').innerHTML = "" + t + "秒后自动跳转到shallwe.work"; // 显示倒计时 
+        t--; // 计数器递减 
+    } 
+</script>
+
 	
 	
 	
