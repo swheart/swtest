@@ -1,0 +1,127 @@
+/*-- breaking-news --*/
+.breaking-news{
+	padding:3em 0 0;
+}
+
+.breaking-news-grids {
+    margin: 3em 0;
+}
+.breaking-news-grid-right-gridl{
+	float:left;
+	width:35%;
+}
+.breaking-news-grid-right-gridr{
+	float:right;
+	width:60%;
+}
+.breaking-news-grid-right ul li{
+	list-style-type:none;
+	margin:2.15em 0;
+}
+.breaking-news-grid-right ul li:nth-child(3){
+	margin:0;
+}
+.breaking-news-grid-right-gridr h4{
+	text-transform:uppercase;
+	font-size:.8em;
+	color:#000;
+	line-height:1.6em;
+	margin:0 0 1em;
+}
+.breaking-news-grid-right-gridr h4 a{
+	font-weight:400;
+	color:#000;
+	text-decoration:none;
+}
+.breaking-news-grid-right-gridr h4 a:hover{
+	color:#999;
+}
+.breaking-news-grid-right-gridr ul li{
+	display:inline-block;
+	margin:0 0 0 1em !important;
+}
+.breaking-news-grid-right-gridr ul li a{
+	font-size:.8em;
+	color:#27b311;
+	text-decoration:none;
+	font-weight:400;
+}
+.breaking-news-grid-right-gridr ul li a span{
+	left:-1em;
+	color:#999;
+}
+.breaking-news-grid-right-gridr ul li a:hover{
+	color:#999;
+}
+.breaking-news-grid-right h3{
+	margin:0 !important;
+}
+
+
+
+
+/*-- video-grids --*/
+.video-grids{
+	margin:3em 0;
+}
+.play-icon span{
+		/*大播放图标（width: 72px;height: 72px;）*/
+		/*background: url(../images/img-sp.png) no-repeat -1px -80px;*/
+		/*小播放图标*/
+		background: url(../images/img-sp.png) no-repeat -89px -92px;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		bottom: 5%;
+		left: 5%;
+	}
+.video-grid-pos{
+	position: absolute;
+	bottom: 6%;
+    left: 23%;
+    width:75%;
+}
+.video-grid-pos h3{
+	font-size:1.5em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+.video-grid-pos ul{
+	padding:1em 0 0;
+	text-align:right;
+}
+.video-grid-pos ul li{
+	display: inline-block;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-right: 1em;
+}
+.video-grid-pos ul li label {
+    padding-left: 1em;
+}
+.video-grid-pos ul li i{
+	font-style:normal;
+	color:#27b311;
+}
+.video-grid-pos ul li span{
+	color:#ff1800;
+}
+.video-grids-left1{
+	position:relative;
+}
+.video-grids-left1 img{
+	width:100%;
+}
+/* .copyrights{
+	text-indent:-9999px;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+} */
+
+
