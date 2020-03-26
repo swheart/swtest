@@ -30,6 +30,21 @@
 
   <body>
 	
+	
+	
+	<style>
+    .dingshi  {
+        background: #000000;
+        color: #ffffff;
+        padding: 3px;
+        font-size: 13px;
+    }
+</style>
+	
+	
+	
+	
+	
 	<!-- +++++ Projects Section +++++ -->
 	<div class="container">
 		<div class="row mt centered">
@@ -38,7 +53,17 @@
 				
 				
 				<div align="center" style="font-size: 16px;padding-top:10px;padding-bottom:20px">
-				<span id="span_dt_dt" style='border:0px solid black;background-color:#FFFFFF' ></span>
+				
+				
+				<div class="weui-cell__ft">距离大然姐生日还有
+        <!-- 时  分 秒-->
+        <span class="dingshi"></span>小时
+        <span class="dingshi"></span>分
+        <span class="dingshi"></span>秒
+    </div>
+
+
+				<!--<span id="span_dt_dt" style='border:0px solid black;background-color:#FFFFFF' ></span>-->
 				</div>
 				
 				
@@ -62,31 +87,40 @@
 	<!-- <br>倒计时已结束<br>--></br>
 
 
-<SCRIPT language=javascript>
-<!--
-//document.write("");
-function show_time(){
-window.setTimeout("show_time()", 1000);
-BirthDay=new Date("04/26/2020");//改成你的计时日期
-today=new Date();
-timeold=(BirthDay.getTime()-today.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(e_daysold-daysold)*24;
-hrsold=Math.floor(e_hrsold);
-e_minsold=(e_hrsold-hrsold)*60;
-minsold=Math.floor((e_hrsold-hrsold)*60);
-seconds=Math.floor((e_minsold-minsold)*60);
-span_dt_dt.innerHTML="距离大然姐生日还有"+"<br>"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
-}
-show_time();
-//-->
-</SCRIPT>
-	
-	
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    function antitime() {
+        //在安卓上这样写可以获取到的---结束时间
+        var time="2020-04-26 00:00:00";
+        //但在苹果手机上是不支持的，必须这样写：
+        var to = new Date(time.replace(/-/g, "/"));
+        var now = new Date();
+        var deltaTime = to.getTime() - now.getTime();
+        //超时就停止倒计时
+        if (deltaTime <= 0) {
+            window.clearInterval(timer);
+            return;
+        }
+        var d= deltaTime / (1000 * 60 * 60 * 24);
+        var h = Math.floor(deltaTime / 1000 / 60 / 60 % 24);
+        var m = Math.floor(deltaTime / 1000 / 60 % 60);
+        var s = Math.floor(deltaTime / 1000 % 60);
+        //把时间的数字转成字符串， 如果时分秒不足10， 则前面补0
+        var timeStr = ""+ (h/10>=1?h=h:h="0"+h) + (m/10>=1?m=m:m="0"+m) + (s/10>=1?s=s:s="0"+s);
+        //console.log(timeStr);
+        //each循环遍历.num元素
+        $(".weui-cell__ft .dingshi").each(function(index, span) {
+            $(span).html(timeStr.substring(index, index+2));
+            if(index==1) $(span).html(timeStr.substring(2, 4));
+            if(index==2) $(span).html(timeStr.substring(4, 6));
+            //$(span).html();这个方法是用来设置span里面的值的
+        });
+    }
+
+    //每秒执行一次
+    var timer = setInterval(antitime, 1000);
+</script>
+
 	
 	
 	
