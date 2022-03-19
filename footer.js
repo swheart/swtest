@@ -29,7 +29,7 @@ document.writeln("			</div>");
 document.writeln("		");
 document.writeln("		</div>");
 document.writeln("		<div class=\'container centered\'>");
-document.writeln("			<h8>Copyright © 2019 shallwe.ga All rights reserved.</h8><br/>");
+document.writeln("			<h8>Copyright © 2019-2022 shallwe.ga All rights reserved.</h8><br/>");
 document.writeln("			</div>");
 document.writeln("		");
 document.writeln("		");
